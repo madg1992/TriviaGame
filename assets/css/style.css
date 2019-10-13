@@ -1,0 +1,24 @@
+body {
+	background-image: url("../images/scene.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#pokemonLogo {
+	height: 450px;
+	width: 750px;
+	margin-top: -5em;
+}
+
+#character {
+	height: 600px;
+	width: 300px;
+	margin-left: 8em;
+}
+
+#intro {
+	margin-top: -4em;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: antiquewhite;
+}
