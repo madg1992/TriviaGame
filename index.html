@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://kit.fontawesome.com/5af61098c7.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <script src="https://kit.fontawesome.com/5af61098c7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo|Fredoka+One|Gochi+Hand&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	
 </head>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <img id="pokemonLogo" src="assets/images/pokemonLogo.png" alt="Pokemon Logo" />
-                <p id="intro">Take the quiz to test whether you are real a Pokemon Champion! The game automatically ends in 60 seconds, so choose your answers wisely! Good luck!</p>
+                <p id="intro">Take the challenge to test whether you're ready to be a Pokemon Champion! The game automatically ends in 30 seconds, so choose your answers wisely! Good luck!</p>
                 <hr>
                 <div>
                     <h2 id="timer"></h2>
@@ -30,15 +30,11 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4">
-            <img src="assets/images/ashKetchum.png" class="img-fluid text-center" id="character" alt="Ash Ketchum Picture">
-           
-        </div>
 
-        <div class="col-md-8">
-            <div id="startDiv">
+        <div class="col-md-12 gameStart">
+            <div id="startGame">
                 <h2>Press</h2>
-                <button class="btn btn-outline-warning" id="gameStart">Start</button>
+                <button class="btn btn-outline-warning" id="startGame">Start</button>
                 <h2>to Play!</h2>
             </div>
 
@@ -46,7 +42,7 @@
             <div id="questionContainer"></div>
         </div>
 
-        <div class="hide" id="">
+        <div id="resultsBox" class="hidden">
             <h2>Your Score:</h2>
             <p id="rightAnswers"></p>
             <p id="incorrectAnswers"></p>
