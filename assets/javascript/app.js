@@ -18,7 +18,7 @@ $("#startGame").click(startTimer);
 function startTimer() {
 	$("#timer").text("Time Remaining: " + timeRemaining);   
     setInterval(decrement, 1000);
-    $("startGame").hide();
+    $("#startGame").hide();
     displayQuestion();
 }
 
@@ -66,8 +66,8 @@ function showResults(numRight, numWrong, numUnanswered) {
 }
 
 function displayQuestion() {
-    var questionContainer = $("#questionContainer");
-    var answerChoices = $(".form-check");
+    var questionContainer = $("#questionContainer");   // create a var that holds the questionContainer div
+    var answerChoices = $(".form-check");       // create a var that that holds the form-check class
     
     for (var i = 0; i < triviaQuestions.length; i++) {
         questionContainer.append('<div id="question">' + triviaQuestions[i].question + '</div>');
