@@ -44,7 +44,8 @@ function keepScore() {
     for (var i = 0; i < triviaQuestions.length; i++) {    // create a for loop to loop through the array of trivia questions
         correctAnswer = triviaQuestions[i].correct;       // declares the correct answer 
         userAnswer = $('input[id=radio'+i+']:checked + label').text();   // declares the user's answer
-
+        console.log(correctAnswer);
+        console.log(userAnswer);
         if(userAnswer === correctAnswer) {                // if the user's answer is correct, then add 1 to numRight
             numRight++;
         } else if (userAnswer === "") {                   // if the user's answer is not answered, then add 1 to numUnanswered
@@ -107,48 +108,48 @@ var triviaQuestions = [
     {
         question: "What type of attacks are Normal-type Pokemon immune to?",
         answers: ["Fighting", "Ghost", "Dark"],
-        answer: "Ghost"
+        correct: "Ghost"
     },
 
     {
         question: "Which of the following is NOT an evolutionary stone?",
         answers: ["Dragon Stone", "Fire Stone", "Thunder Stone"],
-        answer: "Dragon Stone"
+        correct: "Dragon Stone"
     },
 
     {
         question: "What type of attacks are Flying-type Pokemon immune to?",
         answers: ["Normal", "Ground", "Water"],
-        answer: "Ground"
+        correct: "Ground"
     },
 
     {
         question: "Which Pokemon is the god of all Pokemon?",
         answers: ["Arceus", "Mew", "Mewtwo"],
-        answer: "Arceus"
+        correct: "Arceus"
     },
 
     {
         question: "What weather condition does Groudon summon upon entering battle?",
         answers: ["Hail", "Rain", "Sun"],
-        answer: "Sun"
+        correct: "Sun"
     },
 
     {
         question: "What weather condition does Kyogre summon upon entering battle?",
         answers: ["Sun", "Sandstorm", "Rain"],
-        answer: "Rain"
+        correct: "Rain"
     },
 
     {
         question: "If you need to revive your fainted Pokemon to full health, where do you go?",
         answers: ["Pokemon Gym", "Home", "Pokemon Center"],
-        answer: "Pokemon Center"
+        correct: "Pokemon Center"
     },
 
     {
         question: "If you need to buy supplies in the Pokemon world, where do you go?",
         answers: ["Poke Store", "Poke Dep", "Pokemon Mart"],
-        answer: "Pokemon Mart"
+        correct: "Pokemon Mart"
     }
 ]
