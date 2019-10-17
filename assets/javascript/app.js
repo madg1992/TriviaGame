@@ -32,10 +32,10 @@ function decrement(){
     }
 }
 
-// clearts the interval and compares the user's answers to the correct answer
+// clears the interval and compares the user's answers to the correct answer
 function stopTimer() {
     clearInterval(intervalId);
-    checkAnswers();
+    keepScore();
 }
 
 //compare user input to correct answer
@@ -53,7 +53,9 @@ function keepScore() {
             numWrong++;
         }
     }
+    showResults(numRight, numWrong, numUnanswered);
 }
+
 
 function showResults(numRight, numWrong, numUnanswered) {
     $("#resultsBox").show();
@@ -80,6 +82,10 @@ function displayQuestion() {
         questionContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + choice2 + '</label></div>');
         questionContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + choice3 + '</label></div>');
     }
+
+    var endQuizButton = '<button type="button" class="btn btn-success" id="endQuiz" type="submit">Finish</button>';
+    questionContainer.append(endQuizButton);
+    $("#endQuiz").on("click", stopTimer);
 }
 
 
